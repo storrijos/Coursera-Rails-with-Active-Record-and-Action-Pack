@@ -2,6 +2,7 @@
 
 
 **IMPORTANT NOTES**
+
 In assignment_spec.rb change column_types[“”] to column_for_attribute(‘’)
 
 **Steps followed to create the DB**
