@@ -1,5 +1,15 @@
 ## Assignment for Module #1: Basic Active Record CRUD
 
+
+**IMPORTANT NOTES**
+In assignment_spec.rb change column_types[“”] to column_for_attribute(‘’)
+
+**Steps followed to create the DB**
+```rails g scaffold user username password_digest
+rails g scaffold profile gender birth_year:integer first_name last_name
+rails g scaffold todolist list_name list_due_date:date
+rails g scaffold todoitem due_date:date title description:text completed:boolean```
+
 The overall goal of this assignment is to assess your ability to implement basic CRUD functionality of Active Record. This includes:
 
   * Creating Active Record Models using a rails-provided generator (`rails g model` or `rails g scaffold`)
