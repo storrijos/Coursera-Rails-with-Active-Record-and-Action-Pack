@@ -3,7 +3,10 @@ Assignments for the MOOC "Rails with Active Record and Action Pack" offered from
 
 **Topics covered**
 
-1 Introduction to Active Record
-2 Deep Dive into Active Record
-3 Introduction to Action Pack
-4 Security and Nested Resources in Action Pack
+1. Introduction to Active Record
+
+2. Deep Dive into Active Record
+
+3. Introduction to Action Pack
+
+4. Security and Nested Resources in Action Pack
