@@ -7,25 +7,21 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
  
-
+Profile.destroy_all
 User.destroy_all
+TodoList.destroy_all
+TodoItem.destroy_all
 
 fiorina = User.create! username: "Fiorina", password_digest: "pass1"
 trump = User.create! username: "Trump", password_digest: "pass2"
 carson = User.create! username: "Carson", password_digest: "pass3"
 clinton = User.create! username: "Clinton", password_digest: "pass4"
 
-Profile.destroy_all
-
-
 fiorina.create_profile! gender: "female", birth_year: 1954, first_name: "Carly", last_name: "Fiorina"
 trump.create_profile! gender: "male", birth_year: 1946, first_name: "Donald", last_name: "Trump"
 carson.create_profile! gender: "male", birth_year: 1951, first_name: "Ben", last_name: "Carson"
 clinton.create_profile! gender: "female", birth_year: 1947, first_name: "Hillary", last_name: "Clinton"
 
-
-TodoList.destroy_all
-TodoItem.destroy_all
 
 User.all.each_with_index do |user, index|
     todo_list_per_user = user.todo_lists.create! list_name: "List #{index}", list_due_date: 1.year.since(Date.today) 
