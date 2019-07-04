@@ -7,11 +7,11 @@ class Profile < ApplicationRecord
   validate :prevent_male
 
   def first_or_last_name_present
-    if first_name.nil? && last_name.nil?
-      errors.add(:base, "You have to introduce at least name or last_name")
+      if first_name.present? || last_name.present?
+        errors.add(:first_name, "Must contain at least a first or last name")
+      end
     end
-  end
-
+      
   #def male_or_female
   #  if (gender != 'male' && gender != 'female')
   #    errors.add(:base, "You have to introduce male or female")
