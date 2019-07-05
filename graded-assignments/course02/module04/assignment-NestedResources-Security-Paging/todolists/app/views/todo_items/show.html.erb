@@ -15,10 +15,12 @@
   <%= @todo_item.description %>
 </p>
 
-<p>
-  <strong>Completed:</strong>
-  <%= @todo_item.completed %>
-</p>
+<% if @todo_item.persisted? %>
+  <p>
+    <strong>Completed:</strong>
+    <%= @todo_item.completed %>
+  </p>
+<% end %>
 
-<%= link_to 'Edit', edit_todo_item_path(@todo_item) %> |
-<%= link_to 'Back', todo_items_path %>
+<%= link_to 'Edit', edit_todo_list_todo_item_path(@todo_list, @todo_item) %> |
+<%= link_to 'Back', @todo_list %>
