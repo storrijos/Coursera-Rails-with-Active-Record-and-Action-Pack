@@ -14,4 +14,5 @@ class User < ApplicationRecord
 		User.find(self.id).todo_items.where(completed:true).count
     end
 
+  
 end
